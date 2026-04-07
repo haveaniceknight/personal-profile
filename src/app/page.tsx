@@ -76,12 +76,17 @@ export default function Home() {
               className="animate-fade-in text-neutral-500"
               style={{ animationDelay: `${0.27 + i * 0.03}s` }}
             >
-              <span className="mr-2 text-neutral-700">
-                {i === companies.length - 1 ? "└" : "├"}
-              </span>
+              <span className="mr-2 text-neutral-700">├</span>
               <span className="text-neutral-400">{c}</span>
             </div>
           ))}
+          <div
+            className="animate-fade-in text-neutral-500"
+            style={{ animationDelay: `${0.27 + companies.length * 0.03}s` }}
+          >
+            <span className="mr-2 text-neutral-700">└</span>
+            <span className="text-neutral-600 italic">& many more</span>
+          </div>
         </div>
 
         <Dashed />
